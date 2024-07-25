@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcolor--: rgb(239, 239, 239);
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.Chats {
+  padding: 0;
+  overflow: auto;
+  width: 40%;
+}
+
+.Search {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(239, 239, 239);
+  border-radius:10px;
+  overflow: hidden;
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
+
+.Search input {
+  border: none;
+  flex: 1;
+  background-color: transparent;
+}
+
+.Search input:focus {
+  outline: none;
+}
+
+.Icons>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap:1em;
+}
+
+
+
+.Icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+  height: 100%;
+  background-color: var(--bgcolor--);
+}
+
+.Icons>* {
+  margin-top: 2em;
+}
+
+.Messages {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgcolor--);
+  position: relative;
+}
+
+.Messages::-webkit-scrollbar {
+  display: none;
+  background-color: black;
+}
+
+.Input {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  background-color: white;
+  border-left: 5px solid var(--bgcolor--);
+}
+
+.Input input {
+  flex: 1;
+  padding: 1em;
+  border: none;
+  background-color: inherit;
+}
+
+.Input input:focus {
+  outline: none;
+}
+
+.Input div {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(200, 255, 228);
+  padding: 0 1em;
+  border-radius: 10px;
+  margin: auto;
+}
+
+
+::placeholder {
+  color: rgb(0, 209, 105);
+}
+
+/* c i r a p/s */
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(224, 224, 224);
+  overflow: hidden;
+}
+
+.fa-whatsapp,
+.Home header nav {
+  margin: 0 1em;
+}
+
+.Home header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0.5em;
+  background-color: rgb(0, 1, 57);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.Home header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5em;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.Home h1 {
+  font-size: 6em;
+  font-weight: 900;
+  margin: 0;
+}
+
+.Home h2 {
+  font-weight: 900;
+}
+
+.Home ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.Home .main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.Home header nav ul li a {
+  font-family: var(--font-family);
+  font-weight: 700;
+}
+
+.Home .main .btn-holder {
+  display: flex;
+  gap: 2em;
+  margin-top: 50px;
+}
+
+.Home button {
+  background-color: rgb(0, 255, 166);
+  font-family: var(--font-family);
+  font-weight: 700;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 0.5em 2em;
+  font-size: large;
+  border-radius: 100vh;
+}
+
+.Home button a {
+  color: rgb(0, 1, 57);
+  text-decoration: none;
+}
+
+@media (orientation: portrait) {
+  .Home .main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-wrap: wrap;
+    word-break: break-all;
+    overflow: hidden;
+  }
+
+  .Home h1 {
+    font-size: 3em;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .Home .main img {
+    padding: 0;
+    margin: 0;
+  }
+
+  .Home .main {
+    text-align: left;
+  }
+
+  .btn-holder {
+    width: 100%;
+  }
+
+  .Home .main img {
+    width: 90%;
+  }
+}
+
+.Login,
+.Signup {
+  --bgcolor: rgb(0, 1, 36);
+  --color: rgb(0, 255, 187);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bgcolor);
+  color: var(--color);
+}
+
+.Login > form > div,
+.Signup > form > div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.Signup .name {
+  display: flex;
+  gap: 0.5em;
+}
+
+.Login form,
+.Signup form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.Login input,
+.Signup input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: large;
+  font-weight: 600;
+  padding: 0.5em;
+  border: 1px solid var(--color);
+  border-radius: 0.5em;
+  color: white;
+  width: 100%;
+}
+
+.Login button,
+.Signup button {
+  font-size: larger;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+  background-color: var(--color);
+  color: var(--bgcolor);
+}
+
+.Login form > div > input,
+.Signup input {
+  background-color: transparent;
+}
+
+.Login input::placeholder,
+.Signup input::placeholder {
+  color: #202241;
+}
+
+.Login input:focus,
+.Login input:active,
+.Signup input:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+.Login img,
+.Signup img {
+  height: 2em;
+}
+
+.Login .btn {
+  display: flex;
+}
+
+.Signup form > div > div.name {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .Login form,
+  .Signup form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Login > form,
+  .Signup form {
+    width: 90%;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: large;
+  font-weight: 500;
+  padding: 0.5em;
+}
+
+.user:hover {
+  background-color: var(--bgcolor--);
+}
+
+.conversations {
+  margin-top: 1em;
+}
+
+.Input .emoji-picker {
+  background-color: transparent;
+  width: fit-content;
+  position: absolute;
+  bottom: 5em;
+  right: 1em;
+  padding: 0;
+}
+
+.Input .emoji-picker > * {
+  padding: 0;
+  margin: 0;
+}
+
+.img-btn {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 2px solid springgreen;
+  background-color: rgb(147, 255, 201);
+}
+
+.EmptyConversations {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M576.1410863200696 358.38122968688515L523.7842769946707 510.4364448501077 728.1963014832921 410.7380390122841z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M506.681%2c647.142C538.134%2c646.54%2c565.231%2c627.757%2c581.622%2c600.906C598.834%2c572.71%2c607.978%2c537.295%2c591.057%2c508.924C574.432%2c481.048%2c539.135%2c474.78%2c506.681%2c475.249C475.251%2c475.703%2c443.038%2c484.619%2c426.425%2c511.303C408.947%2c539.378%2c409.783%2c575.397%2c426.605%2c603.87C443.146%2c631.867%2c474.169%2c647.764%2c506.681%2c647.142' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M424.80102651695904 119.64583257173132L264.9491697268152 82.74112354652829 228.0444607016122 242.5929803366721 387.896317491756 279.49768936187513z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M913.351240875771 205.4833517808633L763.5924362813644 229.20281623022 787.311900730721 378.9616208246267 937.0707053251277 355.24215637527z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M655.5136776449658 437.26854186043005L580.37146792688 578.5904843418383 721.6934104082883 653.7326940599241 796.8356201263741 512.4107515785158z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1056.75%2c342.732C1073.914%2c342.684%2c1092.522%2c339.252%2c1101.169%2c324.425C1109.862%2c309.518%2c1104.562%2c291.089%2c1095.391%2c276.471C1086.868%2c262.885%2c1072.751%2c254.711%2c1056.75%2c253.62C1038.281%2c252.361%2c1017.64%2c254.841%2c1007.759%2c270.495C997.397%2c286.911%2c1001.003%2c308.607%2c1011.899%2c324.674C1021.595%2c338.97%2c1039.476%2c342.78%2c1056.75%2c342.732' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: larger;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.EmptyConversations span{
+  color: springgreen;
+}
+
+.TextMessages{
+  width: 100%;
+  height:auto;
+}
+
+.TextMessages div{
+  height:100%;
+  max-width: 400px;
+  width: fit-content;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.TextMessages div p{
+  margin:0;
+  width: 100%;
+  text-align: start;
+}
+
+.TextMessages p:last-child{
+  font-size: x-small;
+  text-align: end;
+}
+
+.ImageFiles div,.VideoFiles div{
+   position: relative;
+   width:300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding:0;
+   border-radius: 1em;
+   border: 5px solid;
+   overflow: hidden;
+}
+
+.ImageFiles div img,.VideoFiles>div>video{
+  width: 100%;
+}
+
+.ImageFiles>div>p,.VideoFiles>div>p{
+  position: absolute;
+  font-size: x-small;
+  bottom: 0.5em;
+  right: 1rem;
+}
+
+.ImageFiles>div>a,.VideoFiles>div>a{
+  position: absolute;
+  font-size: x-small;
+  bottom: 0.5em;
+  left: 1rem;
+  color:#2196f3;
+}
+
+
+.docs>div{
+   display: flex;
+   width: 200px;
+   align-items: center;
+   height:100px;
+   gap:0.5em;
+   border-radius: 1em;
+   position: relative;
+   border-radius: 1em;
+   overflow: hidden;
+}
+
+.docs>div>div{
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+
+.docs>div>div>img{
+   object-fit: contain;
+   height:40%;
+   width: 40%;
+}
+
+.docs>div>p{
+  position: absolute;
+  bottom: 0em;
+  right:1em;
+  font-size: x-small;
+}
